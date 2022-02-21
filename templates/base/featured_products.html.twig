@@ -1,0 +1,27 @@
+<!-- start: product grid -->
+<section class="product-grid">
+
+    <header class="row section-header max-inner">
+        <div class="columns-12 col-centered">
+            <h2 class="font-weight-bold">Featured Products</h2><hr />
+        </div>
+    </header>
+
+    <div class="row max-inner featured_products" style="flex-wrap: wrap">
+        {% for product in products %}
+        <!-- start: grid item -->
+        <div class="columns col-3" style="width: 292px;height: 521px;">
+            <div class="grid-item-media"><a href="#"><img src="uploads/images/{{ product.img }}" /></a></div>
+            <div class="grid-item-desc">
+                <h2>
+                        <span class="grid-item-title" style="font-size: medium;">{{ product.title }}</span>
+                </h2>
+            </div>
+        </div>
+        <!-- end: grid item -->
+        {% endfor %}
+
+
+    </div>
+</section>
+<!-- end: product grid -->
